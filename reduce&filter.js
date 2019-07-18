@@ -237,3 +237,149 @@ function shorterThan (arr, n)
 	})
 }
 // if you finish the exercises review the material of the week and help your classmate
+
+/*
+Advanced Part {for your benefits}
+Dont solve any question here if you didnt finish all the question a bove with your pair
+This part you can try it
+You should solve this part solo not with your pair
+This part is extra (and there is no help from the trainer) it is good to try it
+*/
+
+//Using filter 12 -15
+
+/*
+12
+Using Filter
+Create a function called longerThan
+that accept an array of strings
+and return the longer string than the number
+var strings= ["alex","mercer","madrasa","rashed2","emad","hala"]
+Ex: longerThan(strings,4) => ["mercer","madrasa","rashed2"]
+*/
+
+function longerThan (arr, n)
+{
+	return arr.filter(function (elem){
+		if (elem.length > n)
+			return elem;
+	})
+}
+/*
+13
+Using Filter
+Create a function called onlyOneWord
+that accept an array of strings
+and return only those strings with a single word (no spaces)
+var strings= [ 'return', 'phrases', 'with one word' ];
+Ex: onlyOneWord(strings) => [ 'return', 'phrases' ]
+*/
+
+var strings3 = [ 'return', 'phrases', 'with one word' ];
+
+function onlyOneWord(arr)
+{
+	var arr2 = arr.filter(function(elem){
+		
+			if (elem.indexOf(" ") === -1)
+				return elem;
+	
+	});
+	return arr2;
+}
+
+
+/*
+14
+Using Filter
+Create a function called positiveRowsOnly
+that accept an array of array of numbers(matrix)
+and return only the rows in the matrix that have all positive integers
+var numbers= [[ 1, 10, -100 ], [ 2, -20, 200 ],[ 3, 30,  300 ]];
+Ex: positiveRowsOnly(numbers) => [ 3, 30,  300 ]
+*/
+
+var numbers= [[ 1, 10, -100 ], [ 2, -20, 200 ],[ 3, 30,  300 ]];
+
+function positiveRowsOnly (arr)
+{
+	var arr2 = arr.filter(function(elem){
+		var count = 0;
+		for (var i =0 ; i<elem.length; i++)
+			if (elem[i] > 0)
+				count++
+				return count === 3;
+		})
+	return arr2;
+	
+}
+
+
+/*
+15
+Using Filter
+Create a function called allSameVowels
+that accept an array of strings
+return only those words where all the vowels are the same
+var strings= [ 'racecar', 'amalgam', 'oligopoly', 'zoom' ];
+Ex: allSameVowels(strings) =>  [ 'amalgam', 'zoom' ]
+*/
+var strings5 = [ 'racecar', 'amalgam', 'oligopoly', 'zoom' ];
+function allSameVowels (arr)
+{
+	var countA = countO = countE = countI = countU = 0;
+	var arr2 = arr.filter(function(elem){
+		for ( var i = 0; i < elem.length ; i++)
+		{
+			if (elem[i]==="a")
+				countA++;
+			if (elem[i]==="o")
+				countO++;
+			if (elem[i]==="e")
+				countE++;
+			if (elem[i]==="i")
+				countI++;
+			if (elem[i]==="u")
+				countU++;
+		}
+		if (  )
+		{
+			if (countA >= 1)
+				return elem;
+			if (countO >= 1)
+				return elem;
+			if (countE >= 1)
+				return elem;
+			if (countU >= 1)
+				return elem;
+			if (countI >= 1)
+				return elem;
+		}
+	})
+	return arr2;
+}
+
+//Using Reduce 16 -
+
+/*
+16
+Using Reduce
+Create a function called objectify
+that accept an array of pairs array
+and turns an array of arrays into an object
+var array= [[ 'Thundercats', '80s' ],[ 'The Powerpuff Girls', '90s' ],[ 'Sealab 2021', '00s' ]]
+Ex: objectify(array) =>  { 'Thundercats': '80s', 'The Powerpuff Girls': '90s', 'Sealab 2021': '00s' };
+*/
+
+
+/*
+17
+Using Reduce
+Create a function called luckyNumbers
+that accept an array of number
+and turns an array of arrays into an object
+var array= [ 30, 48, 11, 5, 32 ]
+Ex: luckyNumbers(array) => 'Your lucky numbers are: 30, 48, 11, 5, and 32';
+*/
+
+// if you finish the exercises review the material of the week and help your classmate
